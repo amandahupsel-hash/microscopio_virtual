@@ -11,10 +11,25 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        flex-direction: column;
       }
       model-viewer {
         width: 100%;
         height: 100%;
+        max-height: 90vh;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: #ff6600;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #e65c00;
       }
     </style>
   </head>
@@ -23,10 +38,12 @@
       src="membrana.glb"
       ios-src="membrana.usdz"
       ar
+      ar-scale="fixed"
       ar-modes="scene-viewer quick-look webxr"
       camera-controls
       auto-rotate
       background-color="#000000">
+      <button slot="ar-button">🔍 Ver na sua câmera</button>
     </model-viewer>
   </body>
 </html>
